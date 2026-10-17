@@ -1,0 +1,30 @@
+{
+  "name": "kopo-smart-software",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1",
+    "build": "next build",
+    "api:dev": "tsc -p backend/tsconfig.json && node --watch dist-api/backend/main.js",
+    "api:check": "tsc -p backend/tsconfig.json --noEmit",
+    "api:start": "tsc -p backend/tsconfig.json && node dist-api/backend/main.js",
+    "seed": "tsc -p backend/tsconfig.json && node dist-api/backend/seed.js"
+  },
+  "dependencies": {
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@nestjs/common": "^11.1.0",
+    "@nestjs/core": "^11.1.0",
+    "@nestjs/platform-express": "^11.1.0",
+    "mongoose": "^8.19.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "dotenv": "^17.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0"
+  }
+}
